@@ -1,0 +1,31 @@
+import MySQLdb
+
+# Establecer conexión a la base de datos
+try:
+    conn = MySQLdb.connect(
+        host="tu_host",
+        user="tu_usuario",
+        password="tu_contraseña",
+        database="tu_base_de_datos"
+    )
+    print("Conexión exitosa!")
+    conn.close()
+except MySQLdb.Error as e:
+    print("Error de conexión:", e)
+
+// -------------------------------------------------------------------------------------------------
+import MySQLdb
+
+try:
+    conn = MySQLdb.connect(host="tu_host", user="tu_usuario", password="tu_contraseña", database="tu_base_de_datos")
+    cursor = conn.cursor()
+
+    # Ejecutar una consulta SELECT
+    cursor.execute("SELECT * FROM tu_tabla")
+    rows = cursor.fetchall()
+    for row in rows:
+        print(row)
+
+    conn.close()
+except MySQLdb.Error as e:
+    print("Error de conexión:", e)
