@@ -1,2 +1,18 @@
+Descargar .deb de la web de odoo.
+
 sudo apt-get install python3-babel python3-decorator python3-docutils python3-gevent python3-idna python3-jinja2 python3-libsass python3-lxml python3-mock python3-ofxparse python3-openssl python3-passlib python3-polib python3-psutil python3-psycopg2 python3-pydot python3-pypdf2 python3-qrcode python3-requests python3-serial python3-stdnum python3-tz python3-usb python3-vobject python3-werkzeug python3-xlsxwriter python3-xlwt python3-zeep fonts-inconsolata fonts-font-awesome fonts-roboto-unhinted gsfonts libjs-underscore postgresql-client python3-chardet python3-freezegun python3-num2words python3-xlrd
 sudo apt --fix-broken install
+sudo apt-get install -f
+sudo dpkg -i nombre del archivo.deb
+-------------------------------
+sudo dpkg -i odoo_15.0.latest_all.deb 
+sudo systemctl start odoo
+sudo systemctl status odoo
+sudo apt-get install postgresql
+sudo systemctl start postgresql
+sudo systemctl status postgresql
+sudo -u postgres psql
+CREATE ROLE odoo WITH LOGIN PASSWORD 'odoo';
+ALTER ROLE odoo CREATEDB;
+\q
+---------------------------------
